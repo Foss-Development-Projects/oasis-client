@@ -1,13 +1,13 @@
 <script setup lang="ts">
-import { RouterLink, RouterView } from 'vue-router'
-import ThemeSwitchVue from './components/ThemeSwitch.vue';
+import { RouterView } from 'vue-router'
+import NavbarVue from './components/shared/Navbar.vue';
 </script>
 
 <template>
- <ThemeSwitchVue />
+  <NavbarVue />
   <RouterView />
 </template>
 
 <style lang="less" scoped>
-
+ 
 </style>

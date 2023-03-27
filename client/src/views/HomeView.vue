@@ -3,6 +3,6 @@
 
 <template>
   <main>
-    <h1>Working</h1>
+    <h1>WORKING</h1>
   </main>
 </template>

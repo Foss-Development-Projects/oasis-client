@@ -14,6 +14,9 @@ import SearchBar from './../modules/SearchBar.vue';
         <section class="navbar-profile-section">
             <img class="navbar-profile-pic" src="https://cdn-icons-png.flaticon.com/512/3237/3237447.png" alt="User Profile Picture" loading="lazy">
         </section>
+		<button class="navbar-widget-button">
+		    <img class="navbar-widget" src="./../../assets/images/icons/widget.svg" alt="User Profile " loading="lazy">
+		</button>
     </nav>
     
 </template>
@@ -21,17 +24,16 @@ import SearchBar from './../modules/SearchBar.vue';
 <style lang="less" scoped>
     .navbar {
         width: 100%;
-        background-color: rgba(0,0,0,0.7);
+        background-color: rgba(0,0,0,0.8);
         height: 60px;
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr 100px;
+        grid-template-columns: 150px 90px 1fr 50px 50px;
         align-items: center;
     }
     .navbar-header {
         display: flex;
-        justify-content: flex-start;
         align-items: center;
-
+		width: 100%;
     }
     .navbar-header-logo {
         max-width: 40px;
@@ -52,6 +54,24 @@ import SearchBar from './../modules/SearchBar.vue';
 		.navbar-profile-pic {
 		    max-width: 40px;
 		    max-height: 40px;
+		}
+	}
+	.navbar-widget-button {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border-radius: 50%;
+		width: 40px;
+		height: 40px;
+		padding: 5px;
+		transition: background-color, 100ms ease-in-out;
+		&:hover {
+			background-color: rgba(0,0,0,0.85);
+			transition: background-color, 100ms ease-in-out;
+		}
+		.navbar-widget {
+		    width: 100%;
+		    height: 100%;
 		}
 	}
     

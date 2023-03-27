@@ -1,13 +1,12 @@
 <script setup lang="ts">
-
+	const val = this.$ref.search;
+	console.log(val)
 </script>
 
 <template>
 	<section class="search-bar">
 		<form autocomplete="off" action="" class="form">
-			<div class="autocomplete">
-				<input id="search-box" class="search-box" type="text" name="myCountry" placeholder="Country" />
-			</div>
+				<input ref="search" id="search-box" class="search-box" type="text" name="search" placeholder="Search Store" />
 			<button class="search-submit-btn" id="search-submit-btn" type="submit">
 				<img class="search-icon" src="./../../assets/images/icons/search.svg" alt="Search Icon">
 			</button>
@@ -16,41 +15,38 @@
 </template>
 
 <style lang="scss" scoped>
-	// Global Settings -------------------------------------------------------------
 	.search-bar {
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;
+	}
+	.form {
+		width: 100%;
 		display: grid;
-		grid-gap: 15px;
+		height: 45px;
+		grid-template-columns: 1fr 35px;
+		column-gap: 5px;
 		align-items: center;
 		justify-content: center;
-
-	}
-
-	.form {
-		display: grid;
-		grid-template-columns: 1fr 35px;
-		column-gap: 25px;
-		align-items: center;
 		border-radius: 50px;
+		padding:0 5px;
+		max-width: 500px;
 		background-color: var(--searchbar-bg-color);
 		box-shadow: 0px 0px 15px var(--searchbar-bg-color);
 	}
 
 	.search-box {
-		padding: 5px;
-		font-size: 1.1em;
-		height: 25px;
+		font-size: 1em;
 		border-radius: 30px;
 		border: none;
 		outline: none;
+		height: 45px;
 		width: 100%;
 		font-family: "Roboto", sans-serif;
 		color: white;
 		background: transparent;
 		background-color: transparent;
-
-		&::placeholder {
-			color: white;
-		}
+		margin-left: 10px;
 	}
 
 	.search-submit-btn {

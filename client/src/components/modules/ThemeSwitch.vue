@@ -3,7 +3,6 @@
 </script>
 
 <template>
-  <main>
 	<section class="theme-switch">
 	  <button class="ui-theme light">
 		<img class="theme-icon" src="./../../assets/images/icons/light.svg" title="Light" alt="Light Theme Icon">
@@ -15,7 +14,6 @@
 		<img class="theme-icon" src="./../../assets/images/icons/dark.svg" title="Dark" alt="Dark Theme Icon">
 	  </button>
 	</section>
-  </main>
 </template>
 <style lang="less" scoped>
 	@import url('./../../assets/styles/main.less');

@@ -1,12 +1,14 @@
-<script setup lang="ts">
-	const val = this.$ref.search;
-	console.log(val)
-</script>
 
+<script lang="ts">
+	export default {
+		props: ['gridArea']
+	}
+</script>
 <template>
 	<section class="search-bar">
 		<form autocomplete="off" action="" class="form">
-				<input ref="search" id="search-box" class="search-box" type="text" name="search" placeholder="Search Store" />
+				<input ref="search" id="search-box" class="search-box" type="text" name="search" placeholder="Search store" />
+				
 			<button class="search-submit-btn" id="search-submit-btn" type="submit">
 				<img class="search-icon" src="./../../assets/images/icons/search.svg" alt="Search Icon">
 			</button>
@@ -23,30 +25,33 @@
 	.form {
 		width: 100%;
 		display: grid;
-		height: 45px;
-		grid-template-columns: 1fr 35px;
+		height: 36px;
+		grid-template-columns: 1fr 32px;
 		column-gap: 5px;
 		align-items: center;
 		justify-content: center;
 		border-radius: 50px;
-		padding:0 5px;
-		max-width: 500px;
+		max-width: 600px;
 		background-color: var(--searchbar-bg-color);
 		box-shadow: 0px 0px 15px var(--searchbar-bg-color);
 	}
 
 	.search-box {
-		font-size: 1em;
+		font-size: 16px;
 		border-radius: 30px;
 		border: none;
 		outline: none;
-		height: 45px;
+		height: inherit;
 		width: 100%;
 		font-family: "Roboto", sans-serif;
 		color: white;
 		background: transparent;
 		background-color: transparent;
 		margin-left: 10px;
+		caret-shape: bar;
+		&::placeholder {
+			color: black;
+		}
 	}
 
 	.search-submit-btn {
@@ -55,16 +60,16 @@
 		background: none;
 		background-color: var(--searchbar-btn-bg-color);
 		padding: 1.5px 0;
-		width: 35px;
-		height: 35px;
+		width: 30px;
+		height: 30px;
 		border-radius: 50%;
 		cursor: pointer;
 		position: relative;
 
 		.search-icon {
 			color: white;
-			width: 25px;
-			height: 25px;
+			width: calc(30px - 10px);
+			height: calc(30px - 10px);
 			position: absolute;
 			top: 50%;
 			left: 50%;

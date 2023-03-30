@@ -94,10 +94,10 @@
 		width: 40px;
 		height: 40px;
 		padding: 5px;
-		transition: background-color, 100ms ease-in-out;
+		transition: background-color, 200ms ease-in-out;
 
 		&:hover {
-			background-color: rgba(0, 0, 0, 0.85);
+			background-color: var(--accent-color);
 			transition: background-color, 100ms ease-in-out;
 		}
 
@@ -143,7 +143,7 @@
 				"appbar-header appbar-profile appbar-widget"
 				"appbar-list appbar-list appbar-list"
 			;
-			grid-template-columns: 225px 1fr;
+			grid-template-columns: 130px 1fr;
 		}
 
 		.appbar-profile-section {
@@ -157,6 +157,8 @@
 
 		.appbar-list {
 			display:grid;
+			padding: 2.5px;
+			margin-bottom: 5px;
 		}
 	}
 </style>

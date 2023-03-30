@@ -1,6 +1,10 @@
 <script setup lang="ts">
 import { RouterView } from 'vue-router'
-import AppBarVue from './components/shared/AppBar.vue';
+import { register } from 'swiper/element/bundle';
+import AppBarVue from '@/components/shared/AppBar.vue';
+
+register();
+
 </script>
 
 <template>

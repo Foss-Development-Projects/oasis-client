@@ -1,8 +1,10 @@
-<script setup lang="ts">
+<script lang="ts" setup>
+	import Trending from '@/components/blocks/home/Trending.vue'
 </script>
 
 <template>
-  <main>
-    <h1>WORKING</h1>
-  </main>
+	<Trending />
 </template>
+
+<style>
+</style>

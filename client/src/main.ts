@@ -10,8 +10,7 @@ import router from './router'
 
 import './assets/styles/main.less'
 import '@mdi/font/css/materialdesignicons.css'
-import 'swiper/css';
-import 'swiper/css/pagination';
+
 const vuetify = createVuetify({
 	icons: {
 		defaultSet: 'mdi',

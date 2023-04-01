@@ -22,7 +22,7 @@ specifiers:
   prettier: ^2.8.7
   sass: ^1.60.0
   start-server-and-test: ^2.0.0
-  swiper: ^9.1.1
+  tiny-swiper: ^2.2.0
   typescript: ~5.0.2
   vite: ^4.2.1
   vitest: ^0.29.7
@@ -34,7 +34,7 @@ specifiers:
 dependencies:
   '@mdi/font': registry.npmjs.org/@mdi/font/7.2.96
   pinia: registry.npmjs.org/pinia/2.0.33_p4srtwdgezcoeovfcc2yxzvaue
-  swiper: registry.npmjs.org/swiper/9.1.1
+  tiny-swiper: registry.npmjs.org/tiny-swiper/2.2.0
   vue: registry.npmjs.org/vue/3.2.47
   vue-router: registry.npmjs.org/vue-router/4.1.6_vue@3.2.47
   vuetify: registry.npmjs.org/vuetify/3.1.11_vue@3.2.47
@@ -5205,12 +5205,6 @@ packages:
       tweetnacl: registry.npmjs.org/tweetnacl/0.14.5
     dev: true
 
-  registry.npmjs.org/ssr-window/4.0.2:
-    resolution: {integrity: sha512-ISv/Ch+ig7SOtw7G2+qkwfVASzazUnvlDTwypdLoPoySv+6MqlOV10VwPSE6EWkGjhW50lUmghPmpYZXMu/+AQ==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/ssr-window/-/ssr-window-4.0.2.tgz}
-    name: ssr-window
-    version: 4.0.2
-    dev: false
-
   registry.npmjs.org/stackback/0.0.2:
     resolution: {integrity: sha512-1XMJE5fQo1jGH6Y/7ebnwPOBEkIEnT4QF32d5R1+VXdXveM0IBMJt8zfaxX1P3QhVwrYe+576+jkANtSS2mBbw==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/stackback/-/stackback-0.0.2.tgz}
     name: stackback
@@ -5401,15 +5395,6 @@ packages:
     version: 1.0.0
     dev: true
 
-  registry.npmjs.org/swiper/9.1.1:
-    resolution: {integrity: sha512-D1zArOwI6XCXCYBULPA4jTxpqp5SQtvntjinbXNZwXzj6P3KS51zSWuMarCLXq5oRISay4nX+TuShpxz8qhtbw==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/swiper/-/swiper-9.1.1.tgz}
-    name: swiper
-    version: 9.1.1
-    engines: {node: '>= 4.7.0'}
-    dependencies:
-      ssr-window: registry.npmjs.org/ssr-window/4.0.2
-    dev: false
-
   registry.npmjs.org/symbol-tree/3.2.4:
     resolution: {integrity: sha512-9QNk5KwDF+Bvz+PyObkmSYjI5ksVUYtjW7AU22r2NKcfLJcXp96hkDWU3+XndOsUb+AQ9QhfzfCT2O+CNWT5Tw==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/symbol-tree/-/symbol-tree-3.2.4.tgz}
     name: symbol-tree
@@ -5433,6 +5418,14 @@ packages:
     name: through
     version: 2.3.8
     dev: true
+
+  registry.npmjs.org/tiny-swiper/2.2.0:
+    resolution: {integrity: sha512-RG+TtFogipC1yMLa52ICIpE3x0UKxPi24AaZ0n++tuHBkjKLLWk7+D1EDAO1QUWbbm1cvvAspL92/dwQQRnYoA==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/tiny-swiper/-/tiny-swiper-2.2.0.tgz}
+    name: tiny-swiper
+    version: 2.2.0
+    dependencies:
+      typescript: registry.npmjs.org/typescript/4.9.5
+    dev: false
 
   registry.npmjs.org/tinybench/2.4.0:
     resolution: {integrity: sha512-iyziEiyFxX4kyxSp+MtY1oCH/lvjH3PxFN8PGCDeqcZWAJ/i+9y+nL85w99PxVzrIvew/GSkSbDYtiGVa85Afg==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/tinybench/-/tinybench-2.4.0.tgz}
@@ -5596,6 +5589,14 @@ packages:
       for-each: registry.npmjs.org/for-each/0.3.3
       is-typed-array: registry.npmjs.org/is-typed-array/1.1.10
     dev: true
+
+  registry.npmjs.org/typescript/4.9.5:
+    resolution: {integrity: sha512-1FXk9E2Hm+QzZQ7z+McJiHL4NW1F2EzMu9Nq9i3zAaGqibafqYwCVU6WyWAuyQRRzOlxou8xZSyXLEN8oKj24g==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/typescript/-/typescript-4.9.5.tgz}
+    name: typescript
+    version: 4.9.5
+    engines: {node: '>=4.2.0'}
+    hasBin: true
+    dev: false
 
   registry.npmjs.org/typescript/5.0.2:
     resolution: {integrity: sha512-wVORMBGO/FAs/++blGNeAVdbNKtIh1rbBL2EyQ1+J9lClJ93KiiKe8PmFIVdXhHcyv44SL9oglmfeSsndo0jRw==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/typescript/-/typescript-5.0.2.tgz}

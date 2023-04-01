@@ -1,15 +1,13 @@
 <script setup lang="ts">
 import { RouterView } from 'vue-router'
-import { register } from 'swiper/element/bundle';
 import AppBarVue from '@/components/shared/AppBar.vue';
-
-register();
-
+import FooterVue from '@/components/shared/Footer.vue';
 </script>
 
 <template>
   <AppBarVue />
   <RouterView />
+  <FooterVue />
 </template>
 
 <style lang="less" scoped>

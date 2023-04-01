@@ -5,13 +5,13 @@
 <template>
 	<section class="theme-switch">
 	  <button class="ui-theme light">
-		<img class="theme-icon" src="./../../assets/images/icons/light.svg" title="Light" alt="Light Theme Icon">
+		<img class="theme-icon" src="./../../assets/images/icons/vector/light.svg" title="Light" alt="Light Theme Icon">
 	  </button>
 	  <button class="ui-theme system">
-		<img class="theme-icon" src="./../../assets/images/icons/system.svg" title="System" alt="System Theme Icon">
+		<img class="theme-icon" src="./../../assets/images/icons/vector/system.svg" title="System" alt="System Theme Icon">
 	  </button>
 	  <button class="ui-theme dark">
-		<img class="theme-icon" src="./../../assets/images/icons/dark.svg" title="Dark" alt="Dark Theme Icon">
+		<img class="theme-icon" src="./../../assets/images/icons/vector/dark.svg" title="Dark" alt="Dark Theme Icon">
 	  </button>
 	</section>
 </template>

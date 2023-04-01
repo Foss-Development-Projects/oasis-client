@@ -22,21 +22,6 @@
 			<v-carousel-item v-for="(img, i) in pictures" :key="i" :src="img"></v-carousel-item>
 		</v-carousel>
 	</section> -->
-	  <swiper
-    :slidesPerView="3"
-    :spaceBetween="30"
-    :pagination="{
-      clickable: true,
-    }"
-    :modules="modules"
-    class="mySwiper"
-  >
-    <swiper-slide>Slide 1</swiper-slide>
-    <swiper-slide>Slide 2</swiper-slide><swiper-slide>Slide 3</swiper-slide>
-    <swiper-slide>Slide 4</swiper-slide><swiper-slide>Slide 5</swiper-slide>
-    <swiper-slide>Slide 6</swiper-slide><swiper-slide>Slide 7</swiper-slide>
-    <swiper-slide>Slide 8</swiper-slide><swiper-slide>Slide 9</swiper-slide>
-  </swiper>
 </template>
 
 <style>

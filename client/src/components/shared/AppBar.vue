@@ -15,7 +15,7 @@
 			<img class="appbar-profile-pic" src="https://cdn-icons-png.flaticon.com/512/3237/3237447.png"
 				alt="User Profile Picture" loading="lazy">
 			<button class="appbar-widget-button">
-				<img class="appbar-widget" src="./../../assets/images/icons/widget.svg" alt="User Profile"
+				<img class="appbar-widget" src="./../../assets/images/icons/vector/widget.svg" alt="User Profile"
 					loading="lazy">
 			</button>
 		</section>

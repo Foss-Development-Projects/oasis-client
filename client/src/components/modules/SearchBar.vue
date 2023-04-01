@@ -10,7 +10,7 @@
 				<input ref="search" id="search-box" class="search-box" type="text" name="search" placeholder="Search store" />
 				
 			<button class="search-submit-btn" id="search-submit-btn" type="submit">
-				<img class="search-icon" src="./../../assets/images/icons/search.svg" alt="Search Icon">
+				<img class="search-icon" src="./../../assets/images/icons/vector/search.svg" alt="Search Icon">
 			</button>
 		</form>
 	</section>

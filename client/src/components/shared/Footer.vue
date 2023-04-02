@@ -1,4 +1,8 @@
+<script setup lang="ts">
+	import NavBar from './NavBar.vue';
+</script>
 <template>
+	<NavBar />
 	<footer class="footer">
 		<div class="footer-container-1">
 			<header class="footer-header">
@@ -55,9 +59,6 @@
 		</div>
 	</footer>
 </template>
-
-<script>
-</script>
 
 <style lang="scss">
 	.footer {
@@ -211,7 +212,7 @@
 		}
 		.footer-link-1, .footer-link-2 {
 			a {
-				width: 100%;
+				width: auto;
 			}
 		}
 		.footer-copyright {

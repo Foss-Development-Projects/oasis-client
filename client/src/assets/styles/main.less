@@ -1,13 +1,23 @@
 :root {
 	--accent-color:#FAA572;
 	--theme-btn-bg-color: #FAA572;
-	// --theme-switch-bg-color: rgba(0, 0, 0, 0.85);
 	--theme-switch-bg-color: whitesmoke;
 	--searchbar-bg-color:#FAA572;
 	--searchbar-btn-bg-color:#2e4350;
+	--navbar-bg-color:#FAA572;
 }
 html, body {
 	padding: 0;
 	margin: 0;
 	box-sizing: border-box;
+	height: 100%;
 }
+html {
+	min-height: 100vh;
+}
+#app {
+		display: grid;
+		grid-template-columns: 100%;
+		justify-content: space-between;
+		height: 100%;
+	}

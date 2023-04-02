@@ -1,5 +1,4 @@
 <script lang="ts">
-	import IPhone from './../../../assets/images/products/iphone.png';
 	import MacBookPro from './../../../assets/images/products/macbook-pro.png';
 	import IPadPro from './../../../assets/images/products/ipad-pro.png';
 
@@ -7,7 +6,6 @@
 		data() {
 			return {
 				pictures: [
-					IPhone,
 					IPadPro,
 					MacBookPro
 				]

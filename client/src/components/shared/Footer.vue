@@ -94,7 +94,7 @@
 			max-width: 250px;
 			font-weight: lighter;
 			font-size: larger;
-			font-family: "Playfair Display", sans-serif;
+			font-family: "Montserrat Alternates", sans-serif;
 		}
 	}
 

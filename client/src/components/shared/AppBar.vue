@@ -74,13 +74,13 @@
 	.appbar-profile-section {
 		grid-area: appbar-profile;
 		display: flex;
-		padding-left: 10px;
+		margin-left: 15px;
 		justify-content: space-between;
 		align-items: center;
 
 		.appbar-profile-pic {
-			max-width: 40px;
-			max-height: 40px;
+			max-width: 35px;
+			max-height: 35px;
 		}
 	}
 

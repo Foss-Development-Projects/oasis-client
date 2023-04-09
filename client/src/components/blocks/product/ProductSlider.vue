@@ -17,24 +17,43 @@
 </script>
 
 <template>
-	<v-carousel class="product-slider" hide-delimiter-background delimiter-icon="mdi-hexagon" cycle>
-		<v-carousel-item class="product-slider-item" v-for="(img, i) in pictures" :key="i" :src="img"></v-carousel-item>
-	</v-carousel>
+	<div class="product-slider-container">
+		<v-carousel class="product-slider" hide-delimiter-background delimiter-icon="mdi-hexagon" cycle>
+			<v-carousel-item class="product-slider-item" v-for="(img, i) in pictures" :key="i"
+				:src="img"></v-carousel-item>
+		</v-carousel>
+	</div>
+
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
+	.product-slider-container {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
 	.product-slider {
 		border-radius: 10px;
-		max-width: 400px;
+		padding: 10px;
+		max-width: 100%;
+		max-height: 550px;
 
 		.product-slider-item {
 			object-fit: fill;
 		}
 	}
 
+	@media (max-width: 800px) {
+		.product-slider {
+			max-width: 500px;
+			max-height: 400px;
+		}
+	}
+
 	@media (max-width: 600px) {
 		.product-slider {
 			max-width: 600px;
+			max-height: 550px;
 		}
 	}
 </style>

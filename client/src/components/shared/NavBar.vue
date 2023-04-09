@@ -13,6 +13,7 @@
 				modules: [Pagination],
 			};
 		},
+
 	};
 </script>
 <template>
@@ -50,6 +51,7 @@
 		justify-content: center;
 		position: sticky;
 		bottom: 0;
+		z-index: 1;
 	}
 
 	.navbar-list {

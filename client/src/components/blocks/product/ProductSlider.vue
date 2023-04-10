@@ -18,7 +18,7 @@
 
 <template>
 	<div class="product-slider-container">
-		<v-carousel class="product-slider" hide-delimiter-background delimiter-icon="mdi-hexagon" cycle>
+		<v-carousel class="product-slider" hide-delimiter-background delimiter-icon="mdi-hexagon" show-arrows="hover" cycle>
 			<v-carousel-item class="product-slider-item" v-for="(img, i) in pictures" :key="i"
 				:src="img"></v-carousel-item>
 		</v-carousel>
@@ -54,6 +54,12 @@
 		.product-slider {
 			max-width: 600px;
 			max-height: 550px;
+		}
+	}
+	@media (max-width: 400px) {
+		.product-slider {
+			max-width: 100%;
+			max-height: 500px;
 		}
 	}
 </style>

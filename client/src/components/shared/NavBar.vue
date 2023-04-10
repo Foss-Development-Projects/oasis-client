@@ -20,12 +20,25 @@
 	<nav class="navbar">
 		<swiper class="navbar-list" :slidesPerView="3" :spaceBetween="15" :pagination="{
 				clickable: true,
-			}">
+			}" :breakpoints="{
+					'200': {
+						slidesPerView: 2
+					},
+					'640': {
+						slidesPerView: 2,
+					},
+					'768': {
+						slidesPerView: 4,
+					},
+					'1024': {
+						slidesPerView: 5,
+					},
+			    }">
 			<swiper-slide>
 				<a href="/" class="navbar-link">Home</a>
 			</swiper-slide>
 			<swiper-slide>
-				<a href="#" class="navbar-link">Store</a>
+				<a href="/store" class="navbar-link">Store</a>
 			</swiper-slide>
 			<swiper-slide>
 				<a href="#" class="navbar-link">Account</a>

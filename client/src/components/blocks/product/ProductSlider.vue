@@ -42,11 +42,18 @@
 			object-fit: fill;
 		}
 	}
+	@media (max-width: 1150px) {
+		.product-slider {
+			max-width: 800px;
+			max-height: 600px;
+		}
+	}
+	
 
 	@media (max-width: 800px) {
 		.product-slider {
-			max-width: 500px;
-			max-height: 400px;
+			max-width: 600px;
+			max-height: 500px;
 		}
 	}
 

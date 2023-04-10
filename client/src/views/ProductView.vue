@@ -16,8 +16,8 @@
 		width: 100%;
 		grid-template-columns: 600px 1fr;
 	}
-	
-	@media (max-width: 800px) {
+
+	@media (max-width: 1000px) {
 		.product-container {
 			grid-template-columns: 1fr;
 			align-items: center;

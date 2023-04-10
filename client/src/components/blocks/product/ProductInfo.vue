@@ -1,4 +1,17 @@
-<script>
+<script lang="ts">
+	export default {
+		data() {
+			return {
+				features : [
+					{ name: "Model", value: "IPhone 14 Pro Max" },
+					{ name: "Screen Size", value: "6.7 Inch" },
+					{ name: "USB Type", value: "Type-C" },
+					{ name: "Battery", value: "4000MAh" },
+					{ name: "Cameras", value: "3" },
+				]
+			}
+		}
+	}
 </script>
 
 <template>
@@ -18,19 +31,47 @@
 		<section>
 			<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aut unde veniam quos? Iusto cumque illo omnis quaerat repellendus accusantium laborum earum facere dolores, illum ipsum non excepturi id obcaecati delectus? Consectetur doloribus dolorum perferendis, nisi omnis fugit illo. Veritatis distinctio, beatae dolorum magnam harum iste quod velit quasi aperiam totam?</p>
 		</section>
+		<section>
+			<v-table theme="light" density="compact" class="product-info-table">
+			    <thead>
+			      <tr>
+			        <th class="text-left">
+			          Name
+			        </th>
+			        <th class="text-left">
+			          Calories
+			        </th>
+			      </tr>
+			    </thead>
+			    <tbody>
+			      <tr
+			        v-for="item in features"
+			        :key="item.name"
+			      >
+			        <td>{{ item.name }}</td>
+			        <td>{{ item.value }}</td>
+			      </tr>
+			    </tbody>
+			  </v-table>
+		</section>
 	</div>
 	
 </template>
 
 <style lang="scss" scoped>
 	.product-info-section {
-		margin-top: 100px;
+		margin-top: 90px;
 		padding: 10px;
 	}
 	.product-info-price {
 		font-weight: bolder;
 		font-size: larger;
 		color: green;
+	}
+	.product-info-table {
+		margin-top: 15px;
+		border: 1px solid darkgray;
+		border-radius: 10px;
 	}
 	.product-detail {
 		&-button-group {
@@ -55,6 +96,18 @@
 		}
 	}
 	@media (max-width: 1150px) {
+		.product-detail-button-group {
+			justify-content: center;
+			grid-template-columns: 1fr;
+		}
+	}
+	@media (max-width: 1000px) {
+		.product-detail-button-group {
+			justify-content: flex-start;
+			grid-template-columns: 150px 150px 200px;
+		}
+	}
+	@media (max-width: 600px) {
 		.product-detail-button-group {
 			justify-content: center;
 			grid-template-columns: 1fr;

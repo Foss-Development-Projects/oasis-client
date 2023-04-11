@@ -39,8 +39,8 @@
 		border: none;
 		cursor: pointer;
 		&:focus {
-			background-color: var(--theme-btn-bg-color);
-			box-shadow: 0 0 10px var(--theme-btn-bg-color);
+			background-color: var(--accent-color-1);
+			box-shadow: 0 0 10px var(--accent-color-1);
 		}
 	}
     .theme-icon {

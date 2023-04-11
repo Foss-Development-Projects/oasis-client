@@ -166,6 +166,9 @@
 			margin: 5px 0;
 			border-radius: 15px;
 			background-color: rgba(0, 0, 0, 0.4);
+			&:hover {
+				box-shadow: 0 0 10px black;
+			}
 		}
 	}
 

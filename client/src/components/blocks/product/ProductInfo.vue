@@ -19,6 +19,7 @@
 		<section>
 			<h2 class="product-info-title">IPhone 14 Pro Max</h2>
 			<p class="product-info-price">$1299.99</p>
+			<a href="#" class="product-info-site">Visit Official Store</a>
 		</section>
 		<section class="product-detail-button-group">
 			<v-btn class="product-detail-buy-button" rounded="xl" prepend-icon="mdi-shopping">Buy Now</v-btn>
@@ -32,7 +33,7 @@
 			<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aut unde veniam quos? Iusto cumque illo omnis quaerat repellendus accusantium laborum earum facere dolores, illum ipsum non excepturi id obcaecati delectus? Consectetur doloribus dolorum perferendis, nisi omnis fugit illo. Veritatis distinctio, beatae dolorum magnam harum iste quod velit quasi aperiam totam?</p>
 		</section>
 		<section>
-			<v-table theme="light" density="compact" class="product-info-table">
+			<v-table density="compact" class="product-info-table">
 			    <thead>
 			      <tr>
 			        <th class="text-left">
@@ -55,7 +56,6 @@
 			  </v-table>
 		</section>
 	</div>
-	
 </template>
 
 <style lang="scss" scoped>
@@ -67,6 +67,35 @@
 		font-weight: bolder;
 		font-size: larger;
 		color: green;
+	}
+	.product-info-site {
+		display: inline-block;
+		font-weight: lighter;
+		font-size: medium;
+		color: orange;
+		margin-top: 5px;
+		font-family: "Lato", sans-serif;
+		text-decoration: none;
+		position: relative;
+		&::after {
+			content: '';
+			bottom: 0;
+			left: 0;
+			position: absolute;
+			width: 100%;
+			height: 2px;
+			display: block;
+			border-radius: 5px;
+			transform: scaleX(0);
+			transform-origin: left;
+			transition: transform 200ms ease-in-out;
+			background-color: orange;
+			z-index: -1;
+		}
+		&:hover:after {
+			transform: scaleX(1);
+			transition: transform, 200ms ease-in-out;
+		}
 	}
 	.product-info-table {
 		margin-top: 15px;
@@ -94,6 +123,9 @@
 			color: white;
 			border-radius: 50%;
 		}
+	}
+	.product-description {
+		width: 100%;
 	}
 	@media (max-width: 1150px) {
 		.product-detail-button-group {

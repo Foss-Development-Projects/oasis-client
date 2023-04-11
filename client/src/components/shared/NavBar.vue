@@ -12,6 +12,15 @@
 		setup() {
 			return {
 				modules: [Pagination, Navigation],
+				navRoutes: [
+					{ id: 1, name: "Home", path: "/" },
+					{ id: 2, name: "Store", path: "/store" },
+					{ id: 3, name: "Register", path: "/register" },
+					{ id: 4, name: "Account", path: "/account" },
+					{ id: 5, name: "Developer", path: "/developer" },
+					{ id: 6, name: "Privacy policy", path: "/legal" },
+					{ id: 7, name: "User agreement", path: "#" },
+				]
 			};
 		},
 
@@ -19,9 +28,12 @@
 </script>
 <template>
 	<nav class="navbar">
-		<swiper class="navbar-list" :slidesPerView="3" :spaceBetween="15" :modules="modules" :navigation="true" :breakpoints="{
+		<swiper class="navbar-list" :freeMode="true" :slidesPerView="3" :spaceBetween="15" :modules="modules" :navigation="true" :breakpoints="{
 					'200': {
-						slidesPerView: 2
+						slidesPerView: 1
+					},
+					'400': {
+						slidesPerView: 2,
 					},
 					'640': {
 						slidesPerView: 2,
@@ -33,20 +45,8 @@
 						slidesPerView: 5,
 					},
 			    }">
-			<swiper-slide>
-				<a href="/" class="navbar-link">Home</a>
-			</swiper-slide>
-			<swiper-slide>
-				<a href="/store" class="navbar-link">Store</a>
-			</swiper-slide>
-			<swiper-slide>
-				<a href="#" class="navbar-link">Account</a>
-			</swiper-slide>
-			<swiper-slide>
-				<a href="#" class="navbar-link">About us</a>
-			</swiper-slide>
-			<swiper-slide>
-				<a href="#" class="navbar-link">Developer</a>
+			<swiper-slide v-for="route in navRoutes" :key="route.id">
+				<a :href="route.path" class="navbar-link">{{ route.name }}</a>
 			</swiper-slide>
 		</swiper>
 	</nav>
@@ -54,9 +54,9 @@
 
 
 
-<style>
+<style lang="scss">
 	.navbar {
-		background-color: var(--navbar-bg-color);
+		background-color: var(--default-bg-color);
 		display: flex;
 		height: 50px;
 		align-items: center;
@@ -75,15 +75,45 @@
 		text-decoration: none;
 		font-size: 20px;
 		font-weight: lighter;
-		color: white;
-		background-color: rgba(0, 0, 0, 0.5);
+		color: var(--default-fg-color);
 		padding: 5px;
 		border-radius: 5px;
 		width: 100%;
 		text-align: center;
+		position: relative;
+		z-index: 2;
+		&::after {
+			content: '';
+			top: 0;
+			left: 0;
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			display: block;
+			border-radius: 5px;
+			transform: scaleY(0);
+			transform-origin: bottom;
+			transition: transform 200ms ease-in-out;
+			background-color: var(--default-fg-color);
+			z-index: -1;
+		}
+		&:hover {
+			color: var(--default-bg-color);
+		}
+		&:hover:after {
+			transform: scaleY(1);
+			transition: transform, 200ms ease-in-out;
+		}
 	}
 	.swiper-button-prev::after, .swiper-button-next::after {
 		font-size: 24px;
 		font-weight: bolder;
+		color: peachpuff;
+	}
+	.swiper-button-prev {
+		left: .5px;
+	}
+	.swiper-button-next {
+		right: .5px;
 	}
 </style>

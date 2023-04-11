@@ -34,7 +34,7 @@
 <style lang="less" scoped>
 	.appbar {
 		width: 100%;
-		background-color: rgba(0, 0, 0, 0.8);
+		background-color: var(--default-bg-color);
 		padding: 0 5px;
 		display: grid;
 		grid-template-areas:
@@ -97,7 +97,7 @@
 		transition: background-color, 200ms ease-in-out;
 
 		&:hover {
-			background-color: var(--accent-color);
+			background-color: var(--accent-color-1);
 			transition: background-color, 100ms ease-in-out;
 		}
 

@@ -11,7 +11,7 @@
 <template>
 	<section class="search-bar">
 		<form autocomplete="off" action="" class="form">
-				<input ref="search" id="search-box" class="search-box" type="text" name="search" />
+				<input ref="search" id="search-box" class="search-box" type="text" name="search" placeholder="Search here..." />
 				
 			<button class="search-submit-btn" id="search-submit-btn" type="submit">
 				<img class="search-icon" src="./../../assets/images/icons/vector/search.svg" alt="Search Icon">
@@ -36,8 +36,8 @@
 		justify-content: center;
 		border-radius: 50px;
 		max-width: 600px;
-		background-color: var(--searchbar-bg-color);
-		box-shadow: 0px 0px 15px var(--searchbar-bg-color);
+		background-color: var(--accent-color-1);
+		box-shadow: 0px 0px 15px var(--accent-color-1);
 	}
 
 	.search-box {
@@ -59,7 +59,7 @@
 		outline: none;
 		border: none;
 		background: none;
-		background-color: var(--searchbar-btn-bg-color);
+		background-color: var(--accent-color-2);
 		padding: 1.5px 0;
 		width: 30px;
 		height: 30px;

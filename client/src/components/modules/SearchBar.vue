@@ -1,13 +1,17 @@
 
 <script lang="ts">
-	export default {
-		props: ['gridArea']
+		let input = document.getElementById("search-box");
+		export default {
+		computed : {
+			console: () => console,
+			window: () => window,
+		},
 	}
 </script>
 <template>
 	<section class="search-bar">
 		<form autocomplete="off" action="" class="form">
-				<input ref="search" id="search-box" class="search-box" type="text" name="search" placeholder="Search store" />
+				<input ref="search" id="search-box" class="search-box" type="text" name="search" />
 				
 			<button class="search-submit-btn" id="search-submit-btn" type="submit">
 				<img class="search-icon" src="./../../assets/images/icons/vector/search.svg" alt="Search Icon">
@@ -27,7 +31,7 @@
 		display: grid;
 		height: 36px;
 		grid-template-columns: 1fr 32px;
-		column-gap: 5px;
+		column-gap: 15px;
 		align-items: center;
 		justify-content: center;
 		border-radius: 50px;
@@ -38,7 +42,6 @@
 
 	.search-box {
 		font-size: 16px;
-		border-radius: 30px;
 		border: none;
 		outline: none;
 		height: inherit;
@@ -48,10 +51,8 @@
 		background: transparent;
 		background-color: transparent;
 		margin-left: 10px;
-		caret-shape: bar;
-		&::placeholder {
-			color: black;
-		}
+		line-height: 100%;
+		caret-color: white;
 	}
 
 	.search-submit-btn {

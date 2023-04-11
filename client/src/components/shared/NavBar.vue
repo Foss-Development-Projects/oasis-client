@@ -1,8 +1,9 @@
 <script lang="ts">
 	import { Swiper, SwiperSlide } from 'swiper/vue';
-	import { Pagination } from 'swiper';
+	import { Pagination, Navigation } from 'swiper';
 	import 'swiper/css';
 	import 'swiper/css/pagination';
+	import 'swiper/css/navigation';
 	export default {
 		components: {
 			Swiper,
@@ -10,7 +11,7 @@
 		},
 		setup() {
 			return {
-				modules: [Pagination],
+				modules: [Pagination, Navigation],
 			};
 		},
 
@@ -18,9 +19,7 @@
 </script>
 <template>
 	<nav class="navbar">
-		<swiper class="navbar-list" :slidesPerView="3" :spaceBetween="15" :pagination="{
-				clickable: true,
-			}" :breakpoints="{
+		<swiper class="navbar-list" :slidesPerView="3" :spaceBetween="15" :modules="modules" :navigation="true" :breakpoints="{
 					'200': {
 						slidesPerView: 2
 					},
@@ -68,7 +67,7 @@
 	}
 
 	.navbar-list {
-		padding: 0 15px 0 7px;
+		padding: 0 50px 0 40px;
 	}
 
 	.navbar-link {
@@ -82,5 +81,9 @@
 		border-radius: 5px;
 		width: 100%;
 		text-align: center;
+	}
+	.swiper-button-prev::after, .swiper-button-next::after {
+		font-size: 24px;
+		font-weight: bolder;
 	}
 </style>

@@ -36,10 +36,10 @@
 			    <thead>
 			      <tr>
 			        <th class="text-left">
-			          Name
+			          Features
 			        </th>
 			        <th class="text-left">
-			          Calories
+			          Description
 			        </th>
 			      </tr>
 			    </thead>

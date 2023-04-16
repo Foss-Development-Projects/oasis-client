@@ -15,11 +15,11 @@
 </script>
 
 <template>
-	<!-- <section class="home-carousel">
+	<section class="home-carousel">
 		<v-carousel cycle height="250" hide-delimiter-background show-arrows="hover">
 			<v-carousel-item v-for="(img, i) in pictures" :key="i" :src="img"></v-carousel-item>
 		</v-carousel>
-	</section> -->
+	</section>
 </template>
 
 <style>

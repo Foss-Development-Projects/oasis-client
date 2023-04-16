@@ -124,7 +124,8 @@
 		background-color: rgba(0,0,0,0.5);
 	}
 	.appbar-list-theme {
-		justify-content: space-around!important;
+		padding: 10px;
+		justify-content: space-between!important;
 		.appbar-list-item-theme-title {
 			font-weight: bold;
 			font-size: 16px;

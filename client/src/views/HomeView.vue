@@ -1,26 +1,19 @@
 <script lang="ts" setup>
 	import Trending from '@/components/blocks/home/Trending.vue'
+	import SideBar from '@/components/shared/SideBar.vue'
 </script>
 
 <template>
-	<Trending />
-	<h1>Working</h1>
-	<h1>Working</h1>
-	<h1>Working</h1>
-	<h1>Working</h1>
-	<h1>Working</h1>
-	<h1>Working</h1>
-	<h1>Working</h1>
-	<h1>Working</h1>
-	<h1>Working</h1>
-	<h1>Working</h1>
-	<h1>Working</h1>
-	<h1>Working</h1>
-	<h1>Working</h1>
-	<h1>Working</h1>
-	<h1>Working</h1>
-	<h1>Working</h1>
+	<div class="home-container">
+		<Trending />
+		<SideBar />
+	</div>
+	
 </template>
 
-<style>
+<style lang="scss">
+	.home-container {
+		display: flex;
+		width: 100%;
+	}
 </style>

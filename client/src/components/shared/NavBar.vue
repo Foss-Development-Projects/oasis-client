@@ -46,7 +46,7 @@
 					},
 			    }">
 			<swiper-slide v-for="route in navRoutes" :key="route.id">
-				<a :href="route.path" class="navbar-link">{{ route.name }}</a>
+				<router-link :to="route.path" class="navbar-link">{{ route.name }}</router-link>
 			</swiper-slide>
 		</swiper>
 	</nav>

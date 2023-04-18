@@ -1,0 +1,23 @@
+@mixin scrollbar($width, $bg-color, $fg-color, $rounded: 10px) {
+	&::-webkit-scrollbar {
+		width: $width;
+		border-radius: $rounded;
+		&-thumb {
+			background-color: $fg-color;
+			border-radius: $rounded;
+		}
+		&-button {
+			
+		}
+		&-thumb {
+			
+		}
+		&-corner {
+			
+		}
+		&-track {
+			background-color: $bg-color;
+		}
+		&-track-piece {}
+	}
+}

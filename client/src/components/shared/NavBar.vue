@@ -18,8 +18,8 @@
 					{ id: 3, name: "Register", path: "/register" },
 					{ id: 4, name: "Account", path: "/account" },
 					{ id: 5, name: "Developer", path: "/developer" },
-					{ id: 6, name: "Privacy policy", path: "/legal" },
-					{ id: 7, name: "User agreement", path: "#" },
+					{ id: 6, name: "Privacy Policy", path: "/legal" },
+					{ id: 7, name: "Terms & Service", path: "#" },
 				]
 			};
 		},

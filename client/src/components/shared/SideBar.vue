@@ -67,7 +67,7 @@
 				display: grid;
 				grid-template-columns: 24px 1fr;
 				grid-gap: 5px;
-				padding: 5px;
+				padding: 10px 5px;
 				align-items: center;
 				color: inherit;
 				text-decoration: none;

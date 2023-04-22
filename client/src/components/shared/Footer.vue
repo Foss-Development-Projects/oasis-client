@@ -8,7 +8,7 @@
 			<header class="footer-header">
 				<img class="footer-header-logo" src="./../../assets/images/logo/Oasis.svg" alt="Site Logo"
 					loading="lazy" />
-				<p class="footer-header-title">Oasis</p>
+				<router-link to="/" class="footer-header-title">Oasis</router-link>
 			</header>
 			<section class="footer-social">
 				<a href="#" class="footer-social-link">
@@ -113,6 +113,7 @@
 			font-size: 36px;
 			font-family: "Montserrat Alternates", sans-serif;
 			font-weight: lighter;
+			text-decoration: none;
 			letter-spacing: -2px;
 		}
 	}

@@ -7,7 +7,7 @@
 	<nav class="appbar">
 		<header class="appbar-header">
 			<img class="appbar-header-logo" src="./../../assets/images/logo/Oasis.svg" alt="Site Logo" loading="lazy" />
-			<p class="appbar-header-title">Oasis</p>
+			<router-link class="appbar-header-title" to="/">Oasis</router-link>
 		</header>
 		<ThemeSwitchVue class="appbar-theme" />
 		<SearchBar class="appbar-search" />
@@ -61,6 +61,7 @@
 		font-family: "Montserrat Alternates", sans-serif;
 		font-weight: lighter;
 		letter-spacing: -2px;
+		text-decoration: none;
 	}
 
 	.appbar-theme {

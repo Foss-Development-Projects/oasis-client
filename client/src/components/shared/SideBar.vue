@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { sidebarRoutes } from './../../data/data'
+	import { sidebarRoutes } from './../../data/sidebar'
 	export default {
 		data() {
 			return {
@@ -29,7 +29,7 @@
 	@use './../../assets/styles/modules/scrollbar' as mix;
 
 	.sidebar {
-		height: calc(100vh - 150px);
+		height: calc(100vh - 50px);
 		width: 250px;
 		background: var(--default-bg-color);
 		color: var(--default-fg-color);
@@ -56,6 +56,8 @@
 		align-items: center;
 		overflow: hidden;
 		overflow-y: scroll;
+		padding-bottom: 55px;
+		width: 250px;
 		height: calc(100% - 60px);
 		@include mix.scrollbar(5px, orange, blue, 0px);
 

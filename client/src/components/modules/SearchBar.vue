@@ -37,7 +37,7 @@
 		border-radius: 50px;
 		max-width: 600px;
 		background-color: var(--accent-color-1);
-		box-shadow: 0px 0px 15px var(--accent-color-1);
+		box-shadow: 0px 0px 10px var(--accent-color-1);
 	}
 
 	.search-box {

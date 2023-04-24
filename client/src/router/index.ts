@@ -3,6 +3,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from './../views/HomeView.vue';
 import ProductView from './../views/ProductView.vue';
 import RegisterView from './../views/RegisterView.vue';
+import AccountView from './../views/AccountView.vue';
 import NotFoundView from './../pages/404.vue';
 
 const router = createRouter({
@@ -12,6 +13,11 @@ const router = createRouter({
 			path: '/',
 			name: 'home',
 			component: HomeView
+		},
+		{
+			path: '/account',
+			name: 'account',
+			component: AccountView
 		},
 		{
 			path: '/store',
@@ -25,7 +31,7 @@ const router = createRouter({
 		},
 		{
 			path: '/:pathMatch(.*)*',
-			name: '404 Not Found',
+			name: 'notfound',
 			component: NotFoundView
 		}
 	]

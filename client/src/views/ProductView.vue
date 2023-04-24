@@ -15,6 +15,10 @@
 </template>
 
 <style lang="scss">
+	.product-container {
+		background: var(--default-bg-color);
+		color: var(--default-fg-color);
+	}
 	.product-grid-1 {
 		display:grid;
 		width: 100%;

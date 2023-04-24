@@ -35,6 +35,7 @@
 	.appbar {
 		width: 100%;
 		background-color: var(--default-bg-color);
+		color: var(--default-fg-color);
 		padding: 0 5px;
 		display: grid;
 		grid-template-areas:
@@ -56,7 +57,7 @@
 	}
 
 	.appbar-header-title {
-		color: white;
+		color: inherit;
 		font-size: 36px;
 		font-family: "Montserrat Alternates", sans-serif;
 		font-weight: lighter;
@@ -96,12 +97,10 @@
 		height: 40px;
 		padding: 5px;
 		transition: background-color, 200ms ease-in-out;
-
 		&:hover {
-			background-color: var(--accent-color-1);
+			background-color: var(--default-fg-color);
 			transition: background-color, 100ms ease-in-out;
 		}
-
 		.appbar-widget {
 			width: 100%;
 			height: 100%;

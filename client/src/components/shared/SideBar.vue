@@ -59,7 +59,7 @@
 		padding-bottom: 55px;
 		width: 250px;
 		height: calc(100% - 60px);
-		@include mix.scrollbar(5px, orange, blue, 0px);
+		@include mix.scrollbar(5px, var(--default-fg-color), var(--accent-color-1), 5px);
 
 		&-item {
 			margin-bottom: 5px;

@@ -25,18 +25,26 @@
 </template>
 
 <style lang="scss" scoped>
+	@use './../../../assets/styles/modules/scrollbar' as mix;
 	.home-products {
+		background-color: var(--default-bg-color);
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
-		grid-template-rows: 250px;
+		grid-template-rows: minmax(250px, auto);
 		gap: 10px;
+		overflow: hidden;
+		overflow-y: scroll;
 		padding: 10px;
+		height: calc(100vh - 100px);
+		@include mix.scrollbar(5px, var(--default-fg-color), var(--accent-color-1), 0px);
 	}
 	.home-product {
-		box-shadow: 0 0 10px black;
+		box-shadow: 0 0 10px rgba(0,0,0,0.15);
 		display: grid;
 		border-radius: 10px;
 		padding: 5px;
+		background-color: var(--default-bg-color);
+		color: var(--default-fg-color);
 		grid-template-rows: 120px 1fr;
 		&-thumbnail {
 			display: flex;

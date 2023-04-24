@@ -129,6 +129,8 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
+		background: var(--default-bg-color);
+		color: var(--default-fg-color);
 	}
 	.register {
 		max-width: 600px;
@@ -165,7 +167,7 @@
 			font-weight: bold;
 			text-decoration: none;
 			margin-left: 15px;
-			color: var(--default-bg-color);
+			color: var(--default-fg-color);
 			&:hover {
 				color: yellowgreen;
 			}

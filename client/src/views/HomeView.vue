@@ -6,7 +6,7 @@
 
 <template>
 	<div class="home-container">
-		<!-- <Trending class="trending" /> -->
+		<Trending class="trending" />
 		<SideBar class="sidebar" />
 		<Products class="products" />
 	</div>

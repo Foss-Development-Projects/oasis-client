@@ -1,12 +1,6 @@
-<script lang="ts">
-	import { sidebarRoutes } from './../../data/sidebar'
-	export default {
-		data() {
-			return {
-				sidebarRoutes
-			}
-		},
-	}
+<script lang="ts" setup>
+	import { useHomeStore } from '@/stores/store';
+	const store = useHomeStore();
 </script>
 
 <template>
@@ -15,7 +9,7 @@
 			<v-icon icon="mdi-close-circle-outline"></v-icon>
 		</header>
 		<ul class="sidebar-list">
-			<li class="sidebar-list-item" v-for="(item, index) in sidebarRoutes" :key="index">
+			<li class="sidebar-list-item" v-for="(item, index) in store.homeSidebarRoutes" :key="index">
 				<a class="sidebar-list-item-link" :href="item.path">
 					<v-icon class="sidebar-list-item-link-icon" :icon="item.icon"></v-icon>
 					<p class="sidebar-list-item-link-title">{{ item.name }}</p>
@@ -29,7 +23,6 @@
 	@use './../../assets/styles/modules/scrollbar' as mix;
 
 	.sidebar {
-		height: calc(100vh - 50px);
 		width: 250px;
 		background: var(--default-bg-color);
 		color: var(--default-fg-color);
@@ -58,7 +51,7 @@
 		overflow-y: scroll;
 		padding-bottom: 55px;
 		width: 250px;
-		height: calc(100% - 60px);
+		height: calc(100vh - 61px);
 		@include mix.scrollbar(5px, var(--default-fg-color), var(--accent-color-1), 5px);
 
 		&-item {
@@ -69,13 +62,13 @@
 				display: grid;
 				grid-template-columns: 24px 1fr;
 				grid-gap: 5px;
-				padding: 10px 5px;
+				padding: 5px;
 				align-items: center;
 				color: inherit;
 				text-decoration: none;
 				width: 100%;
 				border-radius: 5px;
-				background-color: rgba(0, 0, 0, 0.85);
+				background-color: var(--default-bg-color);
 				transition: background-color, color, 200ms ease-in-out;
 
 				&:hover {
@@ -86,12 +79,11 @@
 
 				&-title {
 					font-size: 20px;
-					font-family: "Montserrat Alternates", sans-serif;
+					font-family: "Open Sans", sans-serif;
 				}
 
 				&-icon {}
 			}
 		}
-
 	}
 </style>

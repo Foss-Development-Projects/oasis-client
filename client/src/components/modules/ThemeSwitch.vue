@@ -15,8 +15,8 @@
 	  </button>
 	</section>
 </template>
-<style lang="less" scoped>
-	@import url('./../../assets/styles/main.less');
+<style lang="scss" scoped>
+	@use './../../assets/styles/main';
     .theme-switch {
 			background-color: var(--theme-switch-bg-color);
 			border-radius: 20px;

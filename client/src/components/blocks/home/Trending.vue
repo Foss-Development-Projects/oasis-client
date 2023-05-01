@@ -1,6 +1,6 @@
 <script lang="ts">
-	import MacBookPro from './../../../assets/images/products/macbook-pro.png';
-	import IPadPro from './../../../assets/images/products/ipad-pro.png';
+	import MacBookPro from '@/assets/images/products/macbook-pro.png';
+	import IPadPro from '@/assets/images/products/ipad-pro.png';
 
 	export default {
 		data() {
@@ -23,8 +23,5 @@
 </template>
 
 <style>
-	.home-carousel {
-		margin-top: 15px;
-		border-radius: 10px;
-	}
+	
 </style>

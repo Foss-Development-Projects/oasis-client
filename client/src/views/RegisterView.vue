@@ -153,8 +153,9 @@
 		display: flex;
 		width: 100%;
 		flex-direction: column;
+		align-items: center;
 		button {
-			width: 100%;
+			width: 250px;
 			font-size: small;
 			font-weight: bold;
 			margin-bottom: 15px;

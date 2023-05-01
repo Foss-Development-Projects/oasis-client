@@ -12,8 +12,15 @@
 		<ThemeSwitchVue class="appbar-theme" />
 		<SearchBar class="appbar-search" />
 		<section class="appbar-profile-section">
-			<img class="appbar-profile-pic" src="https://cdn-icons-png.flaticon.com/512/3237/3237447.png"
-				alt="User Profile Picture" loading="lazy">
+			<router-link to="/account" class="appbar-profile-section-image">
+				<img 
+					class="appbar-profile-pic"
+					src="https://cdn-icons-png.flaticon.com/512/3237/3237447.png"
+					alt="User Profile Picture"
+					loading="lazy"
+				/>
+			</router-link>
+			
 			<button class="appbar-widget-button">
 				<img class="appbar-widget" src="./../../assets/images/icons/vector/widget.svg" alt="User Profile"
 					loading="lazy">
@@ -31,7 +38,8 @@
 	</nav>
 </template>
 
-<style lang="less" scoped>
+<style lang="scss" scoped>
+	@use './../../assets/styles/modules/layout' as mix;
 	.appbar {
 		width: 100%;
 		background-color: var(--default-bg-color);
@@ -79,11 +87,14 @@
 		margin-left: 15px;
 		justify-content: space-between;
 		align-items: center;
-
-		.appbar-profile-pic {
-			max-width: 35px;
-			max-height: 35px;
+		&-image {
+			@include mix.add-flex;
+			.appbar-profile-pic {
+				max-width: 35px;
+				max-height: 35px;
+			}
 		}
+		
 	}
 
 	.appbar-widget-button {

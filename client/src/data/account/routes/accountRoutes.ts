@@ -1,5 +1,5 @@
 export const accountSidebarRoutes = [
-	{ name: "General", path: "/account", icon: "mdi-dots-grid" },
+	{ name: "General", path: "/account", icon: "mdi-eye-circle-outline" },
 	{ name: "Profile", path: "/account/profile", icon: "mdi-account-circle" },
 	{ name: "Cart", path: "/account/cart", icon: "mdi-cart-outline" },
 	{ name: "Payments", path: "/account/payments", icon: "mdi-credit-card-outline" },

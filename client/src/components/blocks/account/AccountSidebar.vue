@@ -1,6 +1,5 @@
 <script lang="ts" setup>
-	import { useAccountStore } from '@/stores/store';
-	const store = useAccountStore();
+	import { accountSidebarRoutes } from '@/data/account/routes/accountRoutes'
 </script>
 
 <template>
@@ -9,11 +8,11 @@
 			<v-icon icon="mdi-close-circle-outline"></v-icon>
 		</header>
 		<ul class="sidebar-list">
-			<li class="sidebar-list-item" v-for="(item, index) in store.accountSidebarRoutes" :key="index">
-				<a class="sidebar-list-item-link" :href="item.path">
+			<li class="sidebar-list-item" v-for="(item, index) in accountSidebarRoutes" :key="index">
+				<router-link class="sidebar-list-item-link" :to="item.path">
 					<v-icon class="sidebar-list-item-link-icon" :icon="item.icon"></v-icon>
 					<p class="sidebar-list-item-link-title">{{ item.name }}</p>
-				</a>
+				</router-link>
 			</li>
 		</ul>
 	</aside>

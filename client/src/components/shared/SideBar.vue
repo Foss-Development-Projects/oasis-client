@@ -1,6 +1,5 @@
 <script lang="ts" setup>
-	import { useHomeStore } from '@/stores/store';
-	const store = useHomeStore();
+	import { homeSidebarRoutes } from '@/data/home/routes/homeRoutes';
 </script>
 
 <template>
@@ -9,7 +8,7 @@
 			<v-icon icon="mdi-close-circle-outline"></v-icon>
 		</header>
 		<ul class="sidebar-list">
-			<li class="sidebar-list-item" v-for="(item, index) in store.homeSidebarRoutes" :key="index">
+			<li class="sidebar-list-item" v-for="(item, index) in homeSidebarRoutes" :key="index">
 				<a class="sidebar-list-item-link" :href="item.path">
 					<v-icon class="sidebar-list-item-link-icon" :icon="item.icon"></v-icon>
 					<p class="sidebar-list-item-link-title">{{ item.name }}</p>
@@ -26,6 +25,7 @@
 		width: 250px;
 		background: var(--default-bg-color);
 		color: var(--default-fg-color);
+		z-index: 1;
 	}
 	.sidebar-header {
 		text-align: right;

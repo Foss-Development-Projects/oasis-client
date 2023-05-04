@@ -1,11 +1,10 @@
 <script lang="ts" setup>
-	import { useHomeStore } from '@/stores/store';
-	const store = useHomeStore()
+	import { homeProducts } from '@/data/home/products/homeProducts';
 </script>
 
 <template>
 	<div class="home-products">
-		<router-link to="/product" class="home-product" v-for="(item, index) in store.homeProducts" :key="index">
+		<router-link to="/product" class="home-product" v-for="(item, index) in homeProducts" :key="index">
 			<section class="home-product-thumbnail">
 				<img class="home-product-thumbnail-image" :src="item.imgSrc" :alt="item.imgAlt" />
 			</section>

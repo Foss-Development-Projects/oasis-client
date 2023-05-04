@@ -14,7 +14,9 @@
 		height: calc(100vh - 1px);
 		overflow: hidden;
 		overflow-y: scroll;
+		padding: 5px;
+		border-left: 1px solid black;
 		@include scrl.scrollbar(5px, var(--default-fg-color), var(--accent-color-1), 0px);
-		background-color: whitesmoke;
+		background-color: var(--default-bg-color);
 	}
 </style>

@@ -1,5 +1,24 @@
+<script lang="ts">
+	export default {
+		data(){
+			const data = [
+				{ name: "Foster Z", icon: "mdi-account" },
+				{ name: "Foster0123", icon: "mdi-account-circle" },
+				{ name: "fosterunlimited0123@gmail.com", icon: "mdi-email" },
+				{ name: "+91 9004 550 021", icon: "mdi-phone" },
+				{ name: "India", icon: "mdi-map-marker" },
+				{ name: "1 Year 6 Months", icon: "mdi-timelapse" },
+				{ name: "Premium User", icon: "mdi-star-circle-outline" },
+			]
+			return {
+				data
+			}
+		}
+	}
+</script>
+
 <template>
-	<header class="account-header">User Profile</header>
+	<header class="account-header">Overview</header>
 	<section class="account-profile-image-section">
 		<img class="account-profile-image" src="https://cdn-icons-png.flaticon.com/512/3237/3237447.png" alt="Profile Image" />
 	</section>
@@ -12,9 +31,6 @@
 		</div>
 	</section>
 </template>
-
-<script>
-</script>
 
 <style lang="scss">
 	@use './../../../../assets/styles/modules/layout' as mix;
@@ -40,6 +56,7 @@
 			 font-size: larger;
 			 font-family: "Roboto", sans-serif;
 			 font-weight: bolder;
+			 
 		 }
 	}
 	.account-user-info-icon {

@@ -5,14 +5,14 @@ import ProductView from '@/views/ProductView.vue';
 import LoginView from '@/views/LoginView.vue';
 import RegisterView from '@/views/RegisterView.vue';
 
-const AccountView = import('@/views/AccountView.vue');
-const AccountGeneral = import('@/components/blocks/account/pages/AccountGeneral.vue');
-const AccountProfile = import('@/components/blocks/account/pages/AccountProfile.vue');
-const AccountPayment = import('@/components/blocks/account/pages/AccountPayment.vue');
-const AccountCard = import('@/components/blocks/account/pages/AccountCard.vue');
-const AccountProduct = import('@/components/blocks/account/pages/AccountProduct.vue');
-const AccountBill = import('@/components/blocks/account/pages/AccountBill.vue');
-const AccountCart = import('@/components/blocks/account/pages/AccountCart.vue');
+const AccountView = () => import('@/views/AccountView.vue');
+const AccountOverview = () => import('@/components/blocks/account/pages/AccountOverview.vue');
+const AccountProfile = () => import('@/components/blocks/account/pages/AccountProfile.vue');
+const AccountPayment = () => import('@/components/blocks/account/pages/AccountPayment.vue');
+const AccountCard =  () => import('@/components/blocks/account/pages/AccountCard.vue');
+const AccountProduct = () => import('@/components/blocks/account/pages/AccountProduct.vue');
+const AccountBill = () => import('@/components/blocks/account/pages/AccountBill.vue');
+const AccountCart = () => import('@/components/blocks/account/pages/AccountCart.vue');
 
 import NotFoundView from '@/pages/404.vue';
 
@@ -31,22 +31,22 @@ const router = createRouter({
 			children: [
 				{
 					path: '',
-					name: 'account-general',
-					component: AccountGeneral
+					name: 'general',
+					component: AccountOverview
 				},
 				{
 					path: 'profile',
-					name: 'account-profile',
+					name: 'profile',
 					component: AccountProfile
 				},
 				{
 					path: 'cart',
-					name: 'account-cart',
+					name: 'cart',
 					component: AccountCart
 				},
 				{
 					path: 'payments',
-					name: 'account-payments',
+					name: 'payments',
 					component: AccountPayment
 				},
 				{

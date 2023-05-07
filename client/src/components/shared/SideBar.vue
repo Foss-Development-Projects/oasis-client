@@ -8,6 +8,15 @@
 			<v-icon icon="mdi-close-circle-outline"></v-icon>
 		</header>
 		<ul class="sidebar-list">
+			<li class="sidebar-list-item">
+				<form action="" method="GET" class="sidebar-list-item-form">
+					<fieldset>
+						<legend>Budget</legend>
+						<v-text-field prepend-inner-icon="mdi-currency-usd" label="Min" variant="solo"></v-text-field>
+						<v-text-field prepend-inner-icon="mdi-currency-usd" label="Max" variant="solo"></v-text-field>
+					</fieldset>
+				</form>
+			</li>
 			<li class="sidebar-list-item" v-for="(item, index) in homeSidebarRoutes" :key="index">
 				<a class="sidebar-list-item-link" :href="item.path">
 					<v-icon class="sidebar-list-item-link-icon" :icon="item.icon"></v-icon>

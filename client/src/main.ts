@@ -5,6 +5,9 @@ import { createVuetify } from 'vuetify'
 import * as components from 'vuetify/components'
 import * as directives from 'vuetify/directives'
 import { aliases, mdi } from 'vuetify/iconsets/mdi'
+import { FontAwesomeIcon  } from '@fortawesome/vue-fontawesome';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { faUser } from '@fortawesome/free-solid-svg-icons'
 import App from './App.vue'
 import router from './router'
 
@@ -23,7 +26,10 @@ const vuetify = createVuetify({
 	directives,
 })
 
+library.add(faUser)
+
 const app = createApp(App)
+app.component('fa-icon' ,FontAwesomeIcon)
 app.use(createPinia())
 app.use(vuetify)
 app.use(router)

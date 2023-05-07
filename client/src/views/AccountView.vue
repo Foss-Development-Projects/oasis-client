@@ -19,7 +19,7 @@
 		grid-template-columns: 250px 1fr;
 		position: relative;
 	}
-	@media (max-width: 500px){
+	@media (max-width: 700px){
 		.account-container {
 			grid-template-columns: 1fr;
 		}

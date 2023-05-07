@@ -9,7 +9,8 @@
 				<img class="home-product-thumbnail-image" :src="item.imgSrc" :alt="item.imgAlt" />
 			</section>
 			<section class="home-product-detail">
-				<h3 class="home-product-price">{{ item.price }}</h3>
+				<h3 class="home-product-title">{{ item.title }}</h3>
+				<h4 class="home-product-price">{{ item.price }}</h4>
 				<p class="home-product-description">{{ item.desc }}</p>
 			</section>
 		</router-link>
@@ -43,13 +44,19 @@
 		&-thumbnail {
 			display: flex;
 			justify-content: center;
-			&-image {
-				max-width: 120px;
-			}
 		}
 	}
-	.home-product-detail {
-		font-size: small;
+	.home-product {
+		&-price {
+			color: green;
+			margin: 2.5px 0;
+		}
+		&-detail {
+			font-size: small;
+		}
+		&-title {
+			font-size: small;
+		}
 	}
 	@media (max-width: 1200px) {
 		.home-products {

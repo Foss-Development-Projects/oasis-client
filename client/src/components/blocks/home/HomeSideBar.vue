@@ -11,11 +11,31 @@
 			<li class="sidebar-list-item">
 				<form action="" method="GET" class="sidebar-list-item-form">
 					<fieldset class="sidebar-list-item-form-wrapper">
-						<legend>Budget Amount</legend>
-						<v-text-field class="home-sidebar-input" hide-details="auto" density="compact" prepend-inner-icon="mdi-currency-usd"
-							placeholder="Min" persistent-placeholder type="number" variant="solo"></v-text-field>
-						<v-text-field class="home-sidebar-input" hide-details="auto" density="compact" prepend-inner-icon="mdi-currency-usd"
-							placeholder="Max" persistent-placeholder type="number" variant="solo"></v-text-field>
+						<legend>Amount Range</legend>
+						<v-text-field 
+							min="0.01" 
+							step="0.01" 
+							class="home-sidebar-input" 
+							hide-details="auto" 
+							density="compact" 
+							prepend-inner-icon="mdi-currency-usd"
+							placeholder="Min" 
+							persistent-placeholder 
+							type="number" 
+							variant="solo"
+						></v-text-field>
+						<v-text-field 
+							min="0.01" 
+							step="0.01" 
+							class="home-sidebar-input" 
+							hide-details="auto" 
+							density="compact" 
+							prepend-inner-icon="mdi-currency-usd"
+							placeholder="Max" 
+							persistent-placeholder 
+							type="number" 
+							variant="solo"
+						></v-text-field>
 					</fieldset>
 				</form>
 			</li>
@@ -26,7 +46,7 @@
 						<v-checkbox class="sidebar-home-checkbox" label="Price(Low To High)" value="price_low_to_high" color="orange"></v-checkbox>
 						<v-checkbox class="sidebar-home-checkbox" label="Price(High To Low)" value="price_high_to_low" color="orange"></v-checkbox>
 						<v-checkbox class="sidebar-home-checkbox" label="Items on Sale" value="item_on_sale" color="orange"></v-checkbox>
-						<v-checkbox class="sidebar-home-checkbox" label="Items in Stock" value="John" color="orange"></v-checkbox>
+						<v-checkbox class="sidebar-home-checkbox" label="Items in Stock" value="item_on_stock" color="orange"></v-checkbox>
 						<v-checkbox class="sidebar-home-checkbox" label="Pay On Delivery" value="John" color="orange"></v-checkbox>
 					</fieldset>
 				</form>
@@ -142,6 +162,14 @@
 			&__details {
 				display: none;
 			}
+		}
+	}
+	@media (max-width: 700px) {
+		.sidebar {
+			position: absolute;
+			top: 0;
+			left: 0;
+			height: calc(100vh - 1px);
 		}
 	}
 </style>

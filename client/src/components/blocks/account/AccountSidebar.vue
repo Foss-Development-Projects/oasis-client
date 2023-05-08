@@ -14,9 +14,6 @@
 					<p class="sidebar-list-item-link-title">{{ item.name }}</p>
 				</router-link>
 			</li>
-			<li>
-				<font-awesome-icon icon="phone" />
-			</li>
 		</ul>
 	</aside>
 </template>

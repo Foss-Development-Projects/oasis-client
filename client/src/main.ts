@@ -7,7 +7,7 @@ import * as directives from 'vuetify/directives'
 import { aliases, mdi } from 'vuetify/iconsets/mdi'
 import { FontAwesomeIcon  } from '@fortawesome/vue-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
-import { faUser } from '@fortawesome/free-solid-svg-icons'
+import { faUser, faSackDollar } from '@fortawesome/free-solid-svg-icons'
 import App from './App.vue'
 import router from './router'
 
@@ -26,7 +26,7 @@ const vuetify = createVuetify({
 	directives,
 })
 
-library.add(faUser)
+library.add(faUser, faSackDollar)
 
 const app = createApp(App)
 app.component('fa-icon' ,FontAwesomeIcon)

@@ -25,11 +25,11 @@
 		display: grid;
 		grid-template-columns: repeat(4, 1fr);
 		grid-template-rows: auto;
-		gap: 10px;
+		gap: 5px;
 		overflow: hidden;
 		overflow-y: scroll;
 		padding: 10px;
-		height: calc(100vh - 1px);
+		height: calc(100vh - 250px);
 		@include mix.scrollbar(5px, var(--default-fg-color), var(--accent-color-1), 0px);
 	}
 	.home-product {

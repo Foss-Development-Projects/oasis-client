@@ -13,6 +13,7 @@ const AccountCard =  () => import('@/components/blocks/account/pages/AccountCard
 const AccountProduct = () => import('@/components/blocks/account/pages/AccountProduct.vue');
 const AccountBill = () => import('@/components/blocks/account/pages/AccountBill.vue');
 const AccountCart = () => import('@/components/blocks/account/pages/AccountCart.vue');
+const AccountSales = () => import('@/components/blocks/account/pages/AccountSales.vue');
 
 import NotFoundView from '@/pages/404.vue';
 
@@ -63,6 +64,11 @@ const router = createRouter({
 					path: 'cards',
 					name: 'account-cards',
 					component: AccountCard
+				}, 
+				{
+					path: 'sales',
+					name: 'account-sales',
+					component: AccountSales
 				}
 			],
 		},

@@ -6,9 +6,12 @@
 
 <template>
 	<div class="home-container">
-		<Trending class="trending" />
 		<HomeSideBar class="sidebar" />
-		<Products class="products" />
+		<section class="home-container-product-section">
+			<Trending class="trending" />
+			<Products class="products" />
+		</section>
+		
 	</div>
 	
 </template>
@@ -19,5 +22,6 @@
 		flex-direction: row;
 		justify-content: space-between;
 		width: 100%;
+		position: relative;
 	}
 </style>

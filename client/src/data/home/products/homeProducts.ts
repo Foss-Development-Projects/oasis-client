@@ -44,4 +44,10 @@ export const homeProducts = [
 		price: "1699.99$",
 		desc: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sequi nesciunt id ut quibusdam ullam natus impedit.",
 	},
+	{
+		imgSrc: MacBookPro,
+		title: "Ipad Pro 11.7 Inch 512 GB, Wi-Fi Only",
+		price: "1699.99$",
+		desc: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sequi nesciunt id ut quibusdam ullam natus impedit.",
+	},
 ]

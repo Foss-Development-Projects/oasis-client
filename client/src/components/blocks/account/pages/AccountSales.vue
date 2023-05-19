@@ -1,5 +1,6 @@
 <script lang="ts" setup>
-	import { accountSalesRoutes } from '@/data/account/routes/accountRoutes'
+	import { accountSalesRoutes } from '@/data/account/services/accountSalesServices';
+	
 </script>
 
 <template>

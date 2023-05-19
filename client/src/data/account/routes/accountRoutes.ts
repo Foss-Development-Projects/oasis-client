@@ -9,26 +9,3 @@ export const accountSidebarRoutes = [
 	{ name: "Notification", path: "/account/notification", icon: "mdi-square-rounded-badge-outline" },
 	{ name: "Sales", path: "/account/sales", icon: "mdi-cash-multiple" },
 ]
-
-export const accountSalesRoutes = [
-	{ 
-		name: "Dashboard", 
-		content: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reiciendis magni corporis non unde necessitatibus quaerat error", 
-		icon: "fa-sack-dollar" ,
-	},
-	{
-		name: "Dashboard", 
-		content: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reiciendis magni corporis non unde necessitatibus quaerat error", 
-		icon: "fa-sack-dollar" ,
-	},
-	{
-		name: "Dashboard", 
-		content: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reiciendis magni corporis non unde necessitatibus quaerat error", 
-		icon: "fa-sack-dollar" ,
-	},
-	{
-		name: "Dashboard", 
-		content: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reiciendis magni corporis non unde necessitatibus quaerat error", 
-		icon: "fa-sack-dollar" ,
-	},
-]

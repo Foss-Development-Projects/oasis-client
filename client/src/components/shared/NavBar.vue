@@ -1,17 +1,16 @@
 <script lang="ts">
-	import { Swiper, SwiperSlide } from 'swiper/vue';
-	import { Pagination, Navigation } from 'swiper';
+	 import { Swiper, SwiperSlide } from 'swiper/vue';
 	import 'swiper/css';
 	import 'swiper/css/pagination';
 	import 'swiper/css/navigation';
 	export default {
 		components: {
-			Swiper,
-			SwiperSlide,
-		},
+      		Swiper,
+      		SwiperSlide,
+    	},
 		setup() {
 			return {
-				modules: [Pagination, Navigation],
+				modules: [],
 				navRoutes: [
 					{ id: 1, name: "Home", path: "/" },
 					{ id: 2, name: "Store", path: "/store" },

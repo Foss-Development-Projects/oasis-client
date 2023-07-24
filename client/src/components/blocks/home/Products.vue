@@ -29,8 +29,6 @@
 		overflow: hidden;
 		overflow-y: scroll;
 		padding: 10px;
-		height: calc(100vh - 250px);
-		@include mix.scrollbar(5px, var(--default-fg-color), var(--accent-color-1), 0px);
 	}
 	.home-product {
 		box-shadow: 0 0 10px rgba(0,0,0,0.15);

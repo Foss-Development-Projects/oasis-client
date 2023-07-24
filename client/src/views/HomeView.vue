@@ -17,6 +17,7 @@
 </template>
 
 <style lang="scss">
+	@use './../assets/styles/modules/scrollbar' as mix;
 	.home-container {
 		display: flex;
 		flex-direction: row;

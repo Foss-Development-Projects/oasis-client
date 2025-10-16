@@ -33,7 +33,6 @@
 </template>
 
 <style lang="scss">
-	@use './../../../../assets/styles/modules/layout' as mix;
 	.account-header {
 		text-align: center;
 		font-size: 30px;
@@ -41,7 +40,9 @@
 	}
 	.account-profile-image-section {
 		padding: 5px 0;
-		@include mix.add-flex(center, center);
+		display: flex;
+		align-items: center;
+		justify-content: center;
 		.account-profile-image {
 			width: 150px;
 			height: 150px;
@@ -50,7 +51,9 @@
 		}
 	}
 	.account-user-info {
-		@include mix.add-flex(center, flex-start);
+		display: flex;
+		align-items: center;
+		justify-content: flex-start;
 		margin: 2.5px 0;
 		 p {
 			 font-size: larger;
@@ -63,7 +66,9 @@
 		margin-right: 10px;
 	}
 	.account-user-info-section {
-		@include mix.add-flex(center, center, column);
+		display: grid;
+		align-items: center;
+		justify-content: center;
 	}
 	.account-user-info-container {
 		width: 100%;

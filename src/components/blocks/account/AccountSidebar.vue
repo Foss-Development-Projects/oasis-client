@@ -1,12 +1,15 @@
 <script lang="ts" setup>
 	import { accountSidebarRoutes } from '@/data/account/routes/accountRoutes'
+import { PerfectScrollbar } from 'vue3-perfect-scrollbar';
 </script>
 
 <template>
+	<PerfectScrollbar>
 	<aside class="sidebar" id="sidebar">
 		<header class="sidebar-header">
 			<v-icon icon="mdi-close-circle-outline" />
 		</header>
+		
 		<ul class="sidebar-list">
 			<li class="sidebar-list-item" v-for="(item, index) in accountSidebarRoutes" :key="index">
 				<router-link class="sidebar-list-item-link" :to="item.path">
@@ -16,6 +19,7 @@
 			</li>
 		</ul>
 	</aside>
+</PerfectScrollbar>
 </template>
 
 

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-	import ThemeSwitchVue from './../modules/ThemeSwitch.vue';
+	import ThemeSwitchVue from '../modules/ThemeSwitch.vue';
 	import SearchBar from './../modules/SearchBar.vue';
 </script>
 
@@ -39,7 +39,6 @@
 </template>
 
 <style lang="scss" scoped>
-	@use './../../assets/styles/modules/layout' as mix;
 	.appbar {
 		width: 100%;
 		background-color: var(--default-bg-color);
@@ -88,7 +87,9 @@
 		justify-content: space-between;
 		align-items: center;
 		&-image {
-			@include mix.add-flex;
+			display: flex;
+			align-items: center;
+			justify-content: center;
 			.appbar-profile-pic {
 				max-width: 35px;
 				max-height: 35px;

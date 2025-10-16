@@ -18,7 +18,7 @@
 </template>
 
 <style lang="scss" scoped>
-	@use './../../../assets/styles/modules/scrollbar' as mix;
+	// @use './../../../assets/styles/modules/scrollbar' as mix;
 
 	.home-products {
 		background-color: var(--default-bg-color);

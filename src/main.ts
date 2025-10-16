@@ -1,6 +1,5 @@
 import { createApp } from 'vue'
 import { createPinia } from 'pinia'
-import 'vuetify/styles'
 import { createVuetify } from 'vuetify'
 import * as components from 'vuetify/components'
 import * as directives from 'vuetify/directives'
@@ -8,11 +7,14 @@ import { aliases, mdi } from 'vuetify/iconsets/mdi'
 import { FontAwesomeIcon  } from '@fortawesome/vue-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faUser, faSackDollar } from '@fortawesome/free-solid-svg-icons'
+import { PerfectScrollbarPlugin } from 'vue3-perfect-scrollbar'
 import App from './App.vue'
-import router from './router'
+import router from './configs/router.config'
 
-import './assets/styles/main.scss'
+import './main.scss'
 import '@mdi/font/css/materialdesignicons.css'
+import 'vuetify/styles'
+import 'vue3-perfect-scrollbar/style.css';
 
 const vuetify = createVuetify({
 	icons: {
@@ -31,6 +33,7 @@ library.add(faUser, faSackDollar)
 const app = createApp(App)
 app.component('fa-icon' ,FontAwesomeIcon)
 app.use(createPinia())
+app.use(PerfectScrollbarPlugin)
 app.use(vuetify)
 app.use(router)
 app.provide('window', window)

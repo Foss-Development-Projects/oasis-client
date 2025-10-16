@@ -1,11 +1,5 @@
 <script lang="ts">
-	export default {
-		data() {
-			return {
-				rules: [v => v.length <= 249 || 'Max 250 characters'],
-			}
-		}
-	}
+	
 </script>
 
 <template>
@@ -28,15 +22,13 @@
 			prepend-inner-icon="mdi-account-circle" placeholder="Username" persistent-placeholder></v-text-field>
 		<v-text-field class="form-input" type="text" variant="solo" density="compact" prepend-inner-icon="mdi-email"
 			placeholder="Email" persistent-placeholder></v-text-field>
-		<v-textarea counter no-resize :rules="rules" prepend-inner-icon="mdi-bio" class="form-input" variant="solo"
+		<v-textarea counter no-resize prepend-inner-icon="mdi-bio" class="form-input" variant="solo"
 			maxlength="250" placeholder="Short Description About Yourself ..."></v-textarea>
 		<button class="account-submit-button" type="submit">Update</button>
 	</form>
 </template>
 
 <style lang="scss">
-	@use './../../../../assets/styles/modules/layout' as mix;
-
 	.account-header {
 		text-align: center;
 		font-size: 30px;
@@ -45,7 +37,9 @@
 
 	.account-profile-image-section {
 		padding: 5px;
-		@include mix.add-flex(center, center);
+		display: flex;
+		align-items: flex-start;
+		justify-content: flex-start;
 		margin-bottom: 10px;
 		.account-profile-image {
 			width: 150px;
@@ -72,7 +66,9 @@
 	}
 	.account-user-profile-section {
 		width: 100%;
-		@include mix.add-flex(center, center, column);
+		display: flex;
+		align-items: flex-start;
+		justify-content: flex-start;
 	}
 	.account-submit-button {
 		background-color: yellowgreen;

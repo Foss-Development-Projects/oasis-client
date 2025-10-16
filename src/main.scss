@@ -1,5 +1,3 @@
-@use './shared/sidebar';
-
 :root {
 	--accent-color-1: #FAA572;
 	--accent-color-2: #2e4350;
@@ -11,19 +9,28 @@
 	--theme-switch-bg-color: silver;
 	--searchbar-bg-color:#FAA572;
 	--navbar-bg-color:rgba(0,0,0,0.75);
+
 }
 html, body {
 	padding: 0;
 	margin: 0;
 	box-sizing: border-box;
 	height: 100%;
+	
 }
 html {
 	min-height: 100vh;
+	overflow-y: auto!important;
 }
 #app {
 		display: grid;
 		grid-template-columns: 100%;
 		justify-content: space-between;
 		height: 100%;
-	}
+}
+@mixin add-flex($align-items: center, $justify-content: center, $flex-direction: row){
+	display: flex;
+	align-items: $align-items;
+	justify-content: $justify-content;
+	flex-direction: $flex-direction;
+}

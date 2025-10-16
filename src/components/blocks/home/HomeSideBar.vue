@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 	import { homeSidebarRoutes } from '@/data/home/routes/homeRoutes';
+	import { PerfectScrollbar } from 'vue3-perfect-scrollbar';
 </script>
 
 <template>
@@ -7,63 +8,63 @@
 		<header class="sidebar-header">
 			<v-icon icon="mdi-close-circle-outline"></v-icon>
 		</header>
-		<ul class="sidebar-list">
-			<li class="sidebar-list-item">
-				<form action="" method="GET" class="sidebar-list-item-form">
-					<fieldset class="sidebar-list-item-form-wrapper">
-						<legend>Amount Range</legend>
-						<v-text-field 
-							min="0.01" 
-							step="0.01" 
-							class="home-sidebar-input" 
-							hide-details="auto" 
-							density="compact" 
-							prepend-inner-icon="mdi-currency-usd"
-							placeholder="Min" 
-							persistent-placeholder 
-							type="number" 
-							variant="solo"
-						></v-text-field>
-						<v-text-field 
-							min="0.01" 
-							step="0.01" 
-							class="home-sidebar-input" 
-							hide-details="auto" 
-							density="compact" 
-							prepend-inner-icon="mdi-currency-usd"
-							placeholder="Max" 
-							persistent-placeholder 
-							type="number" 
-							variant="solo"
-						></v-text-field>
-					</fieldset>
-				</form>
-			</li>
-			<li class="sidebar-list-item">
-				<form action="" method="GET" class="sidebar-list-item-form">
-					<fieldset class="sidebar-list-item-form-wrapper">
-						<legend>Sort Items</legend>
-						<v-checkbox class="sidebar-home-checkbox" label="Price(Low To High)" value="price_low_to_high" color="orange"></v-checkbox>
-						<v-checkbox class="sidebar-home-checkbox" label="Price(High To Low)" value="price_high_to_low" color="orange"></v-checkbox>
-						<v-checkbox class="sidebar-home-checkbox" label="Items on Sale" value="item_on_sale" color="orange"></v-checkbox>
-						<v-checkbox class="sidebar-home-checkbox" label="Items in Stock" value="item_on_stock" color="orange"></v-checkbox>
-						<v-checkbox class="sidebar-home-checkbox" label="Pay On Delivery" value="John" color="orange"></v-checkbox>
-					</fieldset>
-				</form>
-			</li>
-			<li class="sidebar-list-item" v-for="(item, index) in homeSidebarRoutes" :key="index">
-				<a class="sidebar-list-item-link" :href="item.path">
-					<v-icon class="sidebar-list-item-link-icon" :icon="item.icon"></v-icon>
-					<p class="sidebar-list-item-link-title">{{ item.name }}</p>
-				</a>
-			</li>
-		</ul>
+		<PerfectScrollbar>
+			<ul class="sidebar-list">
+				<li class="sidebar-list-item">
+					<form action="" method="GET" class="sidebar-list-item-form">
+						<fieldset class="sidebar-list-item-form-wrapper">
+							<legend>Amount Range</legend>
+							<v-text-field 
+								min="1" 
+								step="0.01" 
+								class="home-sidebar-input" 
+								hide-details="auto" 
+								density="compact" 
+								prepend-inner-icon="mdi-currency-usd"
+								placeholder="Min" 
+								persistent-placeholder 
+								type="number" 
+								variant="solo"
+							></v-text-field>
+							<v-text-field 
+								min="0.01" 
+								step="0.01" 
+								class="home-sidebar-input" 
+								hide-details="auto" 
+								density="compact" 
+								prepend-inner-icon="mdi-currency-usd"
+								placeholder="Max" 
+								persistent-placeholder 
+								type="number" 
+								variant="solo"
+							></v-text-field>
+						</fieldset>
+					</form>
+				</li>
+				<li class="sidebar-list-item">
+					<form action="" method="GET" class="sidebar-list-item-form">
+						<fieldset class="sidebar-list-item-form-wrapper">
+							<legend>Sort Items</legend>
+							<v-checkbox class="sidebar-home-checkbox" label="Price(Low To High)" value="price_low_to_high" color="orange"></v-checkbox>
+							<v-checkbox class="sidebar-home-checkbox" label="Price(High To Low)" value="price_high_to_low" color="orange"></v-checkbox>
+							<v-checkbox class="sidebar-home-checkbox" label="Items on Sale" value="item_on_sale" color="orange"></v-checkbox>
+							<v-checkbox class="sidebar-home-checkbox" label="Items in Stock" value="item_on_stock" color="orange"></v-checkbox>
+							<v-checkbox class="sidebar-home-checkbox" label="Pay On Delivery" value="John" color="orange"></v-checkbox>
+						</fieldset>
+					</form>
+				</li>
+				<li class="sidebar-list-item" v-for="(item, index) in homeSidebarRoutes" :key="index">
+					<a class="sidebar-list-item-link" :href="item.path">
+						<v-icon class="sidebar-list-item-link-icon" :icon="item.icon"></v-icon>
+						<p class="sidebar-list-item-link-title">{{ item.name }}</p>
+					</a>
+				</li>
+			</ul>
+		</PerfectScrollbar>
 	</aside>
 </template>
 
 <style lang="scss">
-	@use './../../../assets/styles/modules/layout' as mix;
-	@use './../../../assets/styles/modules/scrollbar' as scrl;
 
 	.sidebar {
 		width: 250px;
@@ -100,7 +101,6 @@
 		padding-bottom: 55px;
 		width: 250px;
 		height: calc(100vh - 61px);
-		@include scrl.scrollbar(5px, var(--default-fg-color), var(--accent-color-1), 5px);
 
 		&-item {
 			margin-bottom: 5px;

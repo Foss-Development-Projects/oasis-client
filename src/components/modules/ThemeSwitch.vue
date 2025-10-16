@@ -16,7 +16,7 @@
 	</section>
 </template>
 <style lang="scss" scoped>
-	@use './../../assets/styles/main';
+	@use './../../main.scss';
     .theme-switch {
 			background-color: var(--theme-switch-bg-color);
 			border-radius: 20px;

@@ -1,5 +1,7 @@
 <script setup lang="ts">
-	import NavBar from './NavBar.vue';
+	import NavBar from '../navbar/Navbar.component.vue';
+
+	const year = new Date().getFullYear();
 </script>
 <template>
 	<NavBar />
@@ -33,7 +35,7 @@
 		</div>
 		<div class="footer-container-2">
 			<section class="footer-intro">
-				<p>World class E-commerce site, built with You in mind</p>
+				<p>World class E-commerce site, built with ❤️. <b>Happy Shopping 😊</b></p>
 			</section>
 			<div class="footer-link">
 				<section class="footer-link-1">
@@ -54,7 +56,7 @@
 		</div>
 		<div class="footer-container-3">
 			<section class="footer-copyright">
-				<p>Oasis, &copy;Copyright, 2023, Foster Z</p>
+				<p><b>&copy;</b> Copyright, {{ year }}, Foster Z</p>
 			</section>
 		</div>
 	</footer>
@@ -68,7 +70,7 @@
 		align-items: flex-start;
 		justify-content: center;
 		flex-direction: column;
-		padding: 0 10px;
+		padding: 10px 10px 0 10px;
 
 		a {
 			text-decoration: none;

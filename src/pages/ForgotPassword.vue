@@ -14,15 +14,17 @@
 </script>
 
 <style lang="scss">
-	@use './../assets/styles/modules/layout' as mix;
-
 	.error-container {
 		height: 100vh;
-		@include mix.add-flex(center, center);
+		display: flex;
+		align-items: center;
+		justify-content: center;
 	}
 
 	.error {
-		@include mix.add-flex(center, center, column);
+		display: flex;
+		align-items: center;
+		flex-direction: column;
 	}
 
 	.not-found-error {
